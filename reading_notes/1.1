@@ -1,1 +1,32 @@
+CHAPTER 1: A FIRST NUMERICAL PROBLEM (SECTIONS 1.1 TO 1.6)
 
+1.1 RADIOACTIVE DECAY
+
+Basic Decay Law: Radioactive decay is governed by the differential equation dN/dt = -lambda N, where N(t) is the number of radioactive atoms at time t and lambda is the decay constant.
+Analytical Solution: The exact solution to the decay equation is N(t) = N0 exp(-lambda t), showing an exponential decrease over time.
+Physical Interpretation: The decay constant lambda represents the rate at which the substance decays; a larger lambda indicates faster decay.
+1.2 A NUMERICAL APPROACH
+
+Discrete Approximation: Instead of solving dN/dt = -lambda N analytically, we approximate in small time steps delta t. For each step, N(n+1) = N(n) - lambda * N(n) * delta t.
+Euler Method: This update formula is an example of the Euler method, a straightforward way to numerically solve first-order differential equations.
+Accuracy vs Step Size: Smaller delta t increases accuracy but also increases computational cost, leading to a trade-off between precision and efficiency.
+1.3 DESIGN AND CONSTRUCTION OF A WORKING PROGRAM: GOALS AND PSEUDOCODE
+
+Program Objectives: Clearly define what the program should do, for example, compute N(t) over time and compare with the analytical solution.
+Pseudocode Planning: Before coding, outline the steps: initialize parameters (such as lambda, delta t, N0), loop over time steps, update N, and store or display results.
+Clarity and Modularity: Use clear variable names, modular code (such as functions or subroutines), and well-organized input or output handling.
+1.4 TESTING YOUR PROGRAM
+
+Comparison to Analytical Results: Verify numerical output against the exact solution N(t) = N0 exp(-lambda t). Plotting both can reveal discrepancies.
+Step Size Sensitivity: Vary delta t to see how the solution changes. A smaller time step should converge more closely to the exact solution.
+Debugging and Validation: Use test cases (for instance, very small lambda or very small delta t) to confirm that the program behaves correctly in different scenarios.
+1.5 NUMERICAL CONSIDERATIONS
+
+Stability Issues: If delta t is too large, the numerical solution can become unstable or diverge from the true solution.
+Error Analysis: Truncation error (from the approximation method) and round-off error (due to finite precision) both affect results.
+Practical Trade-offs: Balancing computational speed (larger delta t) with acceptable accuracy (smaller delta t) is key to effective numerical problem-solving.
+1.6 PROGRAMMING GUIDELINES AND PHILOSOPHY
+
+Readable Code: Emphasize meaningful variable names, consistent formatting, and thorough commenting for clarity and maintainability.
+Incremental Development: Write and test small pieces of code before integrating into a larger program. This helps catch errors early.
+Structured Approach: Use logical program flow and modular design (such as functions or subroutines) to keep code organized and flexible.
