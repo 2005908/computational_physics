@@ -1,1 +1,15 @@
+3.1 Simple Harmonic Motion
 
+In simple harmonic motion, when the restoring force is linear, the force acts opposite to the direction of the displacement. This results in a motion that is given by a second-order differential equation. A cosine function describes the displacement as a function of time, including an amplitude, an angular frequency given by the square root of the ratio of the spring constant to the mass (or the ratio of gravitational acceleration to pendulum length for a small amplitude pendulum), and a phase shift.
+
+Next, we introduce the numerical approaches. Derivatives are approximated through finite differences in the case of the Euler method. This is achieved by calculating the next velocity to be the current velocity plus the current acceleration multiplied by a time delta. Then, you use the current velocity to update the position. However, this standard method can lead to an unphysical increase (or decrease) of energy as time goes on.
+
+This, however, is easy to improve upon with a slight modification, called the Euler-Cromer method, which updates the position with the new velocity rather than the current. This modification gives rise to momentum conservation of energy in oscillating systems that is more accurate.
+
+3.2 Damped Oscillations
+
+A damping term is included to account for the friction in the pendulum. We assume that the frictional force is proportional to the velocity and modify the equation of motion. For small angles, we can use the approximation that the sine of the angle is equal to the angle, giving us a simple analysis for the sine of a linear damped oscillator. In this system, the amplitude of motion declines exponentially with time as energy is continuously dissipated through friction. In numerical simulations, it can be realized by reducing the velocity in every time step.
+
+3.3 Driven Nonlinear Pendulum and Chaos
+
+The damping is introduced with such a time-dependent driving force. We reach the equation with the nonlinear sine term and with a sinusoidal driving force. Nonlinearity damping and driving can lead to chaotic behavior. In the chaotic regime, small differences in initial conditions lead to wildly different trajectories. We find that the system becomes an unstructured distribution of points in continuous states due to analyzing its phase space plots and Poincare sections. The strange attractors that emerge have a fractal geometry and mirror the complexity of the dynamics.
