@@ -1,0 +1,26 @@
+Equations written in latex for wiki practice
+4.1:
+This section explores planetary motion using Newtonian gravity. The gravitational force is given by
+F = \frac{GM_sM_e}{r^2}
+with the Sun at the origin and Earth at position (x,y). The acceleration components are
+x'' = -\frac{GM_sx}{r^3}, \quad y'' = -\frac{GM_sy}{r^3}
+The Euler-Cromer method is used for numerical simulation, updating velocity before position to ensure stability. The simulation, using astronomical units and years, accurately reproduces Earth’s 1-year orbit and confirms Kepler’s Third Law
+\frac{T^2}{r^3} = \text{constant}.
+Understanding these principles is crucial for celestial mechanics and astrophysical studies in detail.
+4.2: 
+Section 4.2 discusses the gravitational inverse-square law and its role in stable planetary orbits. By modeling a planet as a “reduced mass” moving under a central potential, the orbital path is elliptical, leading to Kepler’s third law:
+\frac{T^2}{r^3} = \frac{4 \pi^2}{G (M_s + M_e)},
+hence,
+T = 2\pi \sqrt{\frac{a^3}{G (M_s + M_e)}}.
+Small deviations from the exponent 
+p=2 (e.g.,p=2.01) cause significant orbital changes, illustrating the delicate stability of Newtonian gravity. Simulations confirm that closed orbits occur only for 𝑝=2
+Real orbits depart slightly from perfect ellipses due to perturbations and relativistic effects.
+4.3:
+Section 4.3 examines Mercury’s perihelion precession, which deviates from pure Newtonian predictions. By adding a small correction to the inverse-square law, the force becomes
+F = \frac{G M_s M}{r^2} \left(1 + \alpha \frac{1}{r^2}\right),
+where α is an adjustable parameter. Numerical simulations show that the orbit slowly shifts its closest approach to the Sun, measured in arcseconds per century. Fitting the simulated data reveals a linear dependence on α. Extrapolating to 
+α=0 approximates the known precession unexplained by planetary perturbations, about 43″ per century. This method demonstrates how general relativity resolves Mercury’s orbital anomaly, matching observational data closely. A crucial test of Einstein’s theory is satisfied, confirming its predictive power.
+4.4:
+Section 4.4 addresses the three-body problem, focusing on the Sun–Earth–Jupiter system. Because there is no closed-form solution for three or more bodies, we rely on numerical integration. The net force on Earth includes contributions from the Sun and Jupiter:
+F_net = -(G * M_s * M_e) / (r_ES^2) · r̂_ES  -  (G * M_j * M_e) / (r_EJ^2) · r̂_EJ
+Simulations show that Jupiter’s influence on Earth’s orbit is small but measurable. By altering Jupiter’s mass or initial distance, one can see how Earth’s orbital parameters change. This approach can be extended to multiple planetary bodies in general. Overall, the section highlights how even distant massive bodies affect planetary motion and underscores the power of numerical methods in celestial mechanics.
